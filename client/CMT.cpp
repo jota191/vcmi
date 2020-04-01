@@ -1040,11 +1040,11 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
 		if (displayIndex < 0)
 			displayIndex = 0;
 	}
-	if(!checkVideoMode(displayIndex, w, h))
-	{
-		logGlobal->error("Error: SDL says that %dx%d resolution is not available!", w, h);
-		return false;
-	}
+	// if(!checkVideoMode(displayIndex, w, h))
+	// {
+	// 	logGlobal->error("Error: SDL says that %dx%d resolution is not available!", w, h);
+	// 	return false;
+	// }
 
 	bool bufOnScreen = (screenBuf == screen);
 	bool realFullscreen = settings["video"]["realFullscreen"].Bool();
